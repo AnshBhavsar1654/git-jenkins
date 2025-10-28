@@ -1,10 +1,10 @@
 pipeline{
     agent{
-	label ‘local’
+	label 'local' }
     stages{
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: file:///C:/Data/Nirma/Sem-7/MLOps/Jenkins/Github/demo_project
+                git branch: 'main', url: "https://github.com/AnshBhavsar1654/git-jenkins"
             }
         }
         stage('Show workspace'){
@@ -22,5 +22,4 @@ pipeline{
                 bat 'docker-compose up -d'
             }
         }
-    }
 }
