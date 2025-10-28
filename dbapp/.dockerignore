@@ -1,0 +1,5 @@
+.venv
+uv.lock
+pyproject.toml
+main.py
+predictions.db

@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  dbapp:
+    build: ./dbapp
+    container_name: cntdbapp
+    ports:
+      - "8001:8001"
+
+  webapp:
+    build: ./webapp
+    image: demo1_jenkins_as_container_webapp
+    container_name: cntwebapp
+    ports:
+      - "8000:8000"
+    depends_on:
+      - dbapp
