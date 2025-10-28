@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('Checkout Code') {
             steps {
-                git branch: 'master', url: file:///C:/Data/Nirma/Sem-7/MLOps/Jenkins/Github/demo_project
+                git branch: 'main', url: file:///C:/Data/Nirma/Sem-7/MLOps/Jenkins/Github/demo_project
             }
         }
         stage('Show workspace'){
