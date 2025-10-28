@@ -1,25 +1,27 @@
-pipeline{
-    agent{
-	label 'local' }
-    stages{
+pipeline {
+    agent {
+        label 'local'
+    }
+    stages {
         stage('Checkout Code') {
             steps {
                 git branch: 'main', url: "https://github.com/AnshBhavsar1654/git-jenkins"
             }
         }
-        stage('Show workspace'){
-            steps{
+        stage('Show workspace') {
+            steps {
                 bat 'cd'
             }
         }
-        stage('Build Images'){
-            steps{
+        stage('Build Images') {
+            steps {
                 bat 'docker-compose build'
             }
         }
-        stage('Run Containers'){
-            steps{
+        stage('Run Containers') {
+            steps {
                 bat 'docker-compose up -d'
             }
         }
+    }
 }
